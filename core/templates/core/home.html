@@ -1,0 +1,18 @@
+{% extends "core/base.html" %}
+{% block content %}
+    
+    <h3 class="page-header">Aktualności</h3>
+    {% for post in posts %}
+        <div class="card mb-3">
+            <div class="card-header">
+                {{post.data}}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{post.tytuł}}</h5>
+                <p class="card-text">{{post.treść|linebreaks}}</p>
+            </div>
+        </div>
+    {% endfor %}
+    
+    
+{% endblock %}

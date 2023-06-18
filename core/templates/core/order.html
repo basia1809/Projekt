@@ -1,0 +1,42 @@
+{% extends "core/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <h3 class="page-header">Zamów już teraz!</h3>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                {{form.imię|as_crispy_field}}
+            </div>
+            <div class="form-group col-md-6">
+                {{form.nazwisko|as_crispy_field}}
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                {{form.email|as_crispy_field}}
+            </div>
+            <div class="form-group col-md-6">
+                {{form.telefon|as_crispy_field}}
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                {{form.usługa|as_crispy_field}}
+            </div>
+            <div class="form-group col-md-6">
+                {{form.rodzaj_samochodu|as_crispy_field}}
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col">
+                {{form.komentarz|as_crispy_field}}
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-block" type="submit">Zamów</button>
+        </div>
+    </form>
+    
+    
+{% endblock %}

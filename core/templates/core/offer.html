@@ -1,0 +1,39 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block content %}
+<h3 class="page-header">Oferta</h3>
+<div class="d-flex flex-wrap justify-content-center">
+
+    <div class="card m-2 " style="width: 18rem;">
+
+        <img src="{% static 'imgs/renowacja.png' %}" class="card-img-top" alt="...">
+        <h5 class="card-title d-flex justify-content-center mt-2">Renowacja lakieru</h5>
+        <div class="card-body">
+            <p class="card-text card-text-offer">Polerowanie specjalną pastą polerską padami o różnej gradacji.</p>
+        </div>
+    </div>
+
+
+    <div class="card m-2" style="width: 18rem;">
+
+        <img src="{% static 'imgs/tapicerka.jpg' %}" class="card-img-top" alt="...">
+        <h5 class="card-title d-flex justify-content-center mt-2">Pielęgnacja skór</h5>
+        <div class="card-body">
+            <p class="card-text card-text-offer">Usuwanie plam, nawilżanie skóry oraz ochrona przed promieniami słonecznymi.</p>
+        </div>
+    </div>
+
+
+    <div class="card m-2" style="width: 18rem;">
+
+        <img src="{% static 'imgs/mycie.jpg' %}" class="card-img-top" alt="...">
+        <h5 class="card-title d-flex justify-content-center mt-2">Myjnia premium</h5>
+        <div class="card-body">
+            <p class="card-text card-text-offer">Mycie aktywną pianą, nabłyszczanie i woskowanie.</p>
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock %}
